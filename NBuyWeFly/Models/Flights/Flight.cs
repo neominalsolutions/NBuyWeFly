@@ -18,7 +18,7 @@ namespace NBuyWeFly.Models.Flights
 
         public Company Company { get; private set; }
 
-        //uçuş numarası
+        //uçuş numarasıı
         public string FlightNumber { get; private set; }
 
 
