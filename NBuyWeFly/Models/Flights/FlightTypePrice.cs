@@ -8,7 +8,7 @@ namespace NBuyWeFly.Models.Flights
 {
     public class FlightTypePrice
     {
-        
+        //uçuş bilgisi
         public string Type { get; private set; }
         public string Currency { get; private set; }
 
