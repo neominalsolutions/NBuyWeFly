@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace NBuyWeFly.Models.Flights
 {
-   
+    /// <summary>
+    /// uçuş sınıfımız
+    /// </summary>
     public class Flight
     {
         public Airport From { get; private set; }

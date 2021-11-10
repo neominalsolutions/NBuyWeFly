@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace NBuyWeFly.Models.Flights
 {
+    /// <summary>
+    /// Uçuş tiplerine atanabilecek para birimlerini tutar.
+    /// </summary>
     public enum FlightTypeCurrency
     {
         Dolar,

@@ -9,6 +9,9 @@ namespace NBuyWeFly.Models
 {
     public class Company
     {
+        /// <summary>
+        /// Şirket nesnesinin property'lerini tanımladık.
+        /// </summary>
         public string Name { get; private set; }
         public string Code { get; private set; }
 
