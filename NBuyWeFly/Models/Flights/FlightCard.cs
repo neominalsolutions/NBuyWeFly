@@ -127,17 +127,14 @@ namespace NBuyWeFly.Models.Flights
 
         /// <summary>
         /// Daha önceden uçuş kartına aynı para biriminde ve aynı tarifede (bussiness,economy) uçuş fiyatını girmeyi kontrol ettik
-        /// Aynı para birimine ve farklı tarfiler birbileri ile aynı fiyat tarifesi uygulanamasın ve bussiness fiyat tarifesi economyden daha fazla olmalıdır. (business 100 TL, economy 100 TL) olmamalıdır.
-        /// Yarın için FlightTypeCurrency.Count x FlightType.Count adeti kadar farklı fiyat tarifesi uygulanabilir algoritmasını da ekleyelim.
-        /// //FlightTypeların içerisinde gezip Economy ve Business tarife algoritmasını dinamikleştirelim
+        /// Aynı para birimine ve farklı tarifeler birbileri ile aynı fiyat tarifesi uygulanamasın ve bussiness fiyat tarifesi economyden daha fazla olmalıdır. (business 100 TL, economy 100 TL) olmamalıdır.
+        ///  FlightTypeCurrency.Count x FlightType.Count adeti kadar farklı fiyat tarifesi uygulanabilir algoritmasını da ekleyelim.
+        /// FlightTypeların içerisinde gezip Economy ve Business tarife algoritmasını dinamikleştirelim
         /// </summary>
         /// <param name="flightTypePrice"></param>
         public void AddFlightTypePrice(FlightTypePrice flightTypePrice)
         {
             // girilecek olan fiyat bilgisi daha önce başka bir flightprice tanımlandımı kontrolü yapalım
-
-            //var f = FlightTypePrice.CreateInstance(FlightType.Business.ToString(), FlightTypeCurrency.Dolar.ToString(), 10);
-
             var samePriceType = flightTypePrices.Any(x => x.Type == flightTypePrice.Type && x.Currency == flightTypePrice.Currency);
           
 
