@@ -77,7 +77,6 @@ namespace NBuyWeFly.Models.Flights
         /// <param name="flight"></param>
         public void AddFlight(Flight flight)
         {
-            
             // bugün ve bugünden sonraki günler için bir uçuş planlaması yapılabilir.
             // maksimum 1 ay sonrasına uçuş planlanması yapılabilsin
             // Gün içerisinde bir uçuş planlaması yapılacak ise, 6 saat öncesinde uçuş kartı oluşturulmalıdır.
@@ -137,8 +136,6 @@ namespace NBuyWeFly.Models.Flights
             // girilecek olan fiyat bilgisi daha önce başka bir flightprice tanımlandımı kontrolü yapalım
             var samePriceType = flightTypePrices.Any(x => x.Type == flightTypePrice.Type && x.Currency == flightTypePrice.Currency);
           
-
-
             int maximumFlightPriceCount = (Enum.GetNames(typeof(FlightTypeCurrency)).Length) * (Enum.GetNames(typeof(FlightType)).Length);
             int existingFlightPriceCount = flightTypePrices.Count();
 
@@ -173,10 +170,6 @@ namespace NBuyWeFly.Models.Flights
 
                                     throw new Exception($"{flightTypePrice.Type.ToString()} tarifesi {existingFlightTypePrice.Type.ToString()} tarifesinin fiyatını aşmamalıdır!");
                                 }
-                               
-
-                                
-
                             }
                             else
                             {
@@ -185,18 +178,10 @@ namespace NBuyWeFly.Models.Flights
                                 {
                                     throw new Exception($"{flightTypePrice.Type.ToString()} tarifesin in fiyatı {existingFlightTypePrice.Type.ToString()} tarifesinin fiyatından daha yüksek olmalıdır!");
                                 }
-                                
-
-                                
-
+           
                             }
                         }
-                       
-
-                        
-
-                        
-                        
+   
                     }
 
                     // hata olmadıoğı durumda foreach bitince kayıt girdik
@@ -208,13 +193,6 @@ namespace NBuyWeFly.Models.Flights
             {
                 throw new Exception("Bu uçuş kartı için tüm fiyat tarifesi bilgilerini girdiniz!");
             }
-
-
-            // Daha önceden bir fiyat girilmiş ise çalışacak algoritma
-
-            
         }
-
-
     }
 }
