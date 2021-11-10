@@ -11,6 +11,7 @@ namespace NBuyWeFly.Models
     /// </summary>
     public class Airport
     {
+     
         public string Name { get; private set; }
         public string ShortCode { get; private set; }
         public string CityName { get; private set; }
