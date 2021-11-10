@@ -164,7 +164,7 @@ namespace NBuyWeFly.Models.Flights
                             if (existingPriceTypeRank < newPriceTypeRank)
                             {
 
-                                if(existingFlightTypePrice.ListPrice > flightTypePrice.ListPrice)
+                                if(existingFlightTypePrice.ListPrice >= flightTypePrice.ListPrice)
                                 {
                                     
 
@@ -174,7 +174,7 @@ namespace NBuyWeFly.Models.Flights
                             else
                             {
                                 // Business Econmy Case
-                                if(existingFlightTypePrice.ListPrice < flightTypePrice.ListPrice)
+                                if(existingFlightTypePrice.ListPrice <= flightTypePrice.ListPrice)
                                 {
                                     throw new Exception($"{flightTypePrice.Type.ToString()} tarifesin in fiyatı {existingFlightTypePrice.Type.ToString()} tarifesinin fiyatından daha yüksek olmalıdır!");
                                 }

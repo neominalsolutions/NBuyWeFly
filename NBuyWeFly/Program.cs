@@ -145,9 +145,9 @@ namespace NBuyWeFly
 
             #endregion
 
-            // aynı tarife aynı para birimi girilebiliyor mu? veya farklı currency gidilebiliyor mu
+            // Test Case 8: aynı tarife aynı para birimi girilebiliyor mu? veya farklı currency gidilebiliyor mu
             #region Case8
-
+            /*
             FlightCard card8 = new FlightCard(indirect: false);
             var departureDate8 = DateTime.Now.AddHours(10);
             var arrivalDate8 = DateTime.Now.AddHours(15);
@@ -157,15 +157,36 @@ namespace NBuyWeFly
             //card8.AddFlightTypePrice(FlightTypePrice.CreateInstance(FlightType.Business.ToString(), FlightTypeCurrency.TL.ToString(), 78));
             card8.AddFlight(f8);
 
-
+            */
             #endregion
 
-            #region Case9
             /// Test Case 9 Business kaydı atalım 150 TL olsun arkasında 170 lik Economy alarak ekleme yapalım
-
+            #region Case9
+            /*
+            FlightCard card9 = new FlightCard(indirect: false);
+            var departureDate9 = DateTime.Now.AddHours(15);
+            var arrivalDate9 = DateTime.Now.AddHours(20);
+            Flight f9 = new Flight(from, to, departureDate9, arrivalDate9);
+            card9.AddFlightTypePrice(FlightTypePrice.CreateInstance(type:FlightType.Business.ToString(), currency: FlightTypeCurrency.TL.ToString(), 150 ));
+            card9.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Economy.ToString(), currency: FlightTypeCurrency.TL.ToString(), 170));
+            */
             #endregion
+           
             // uçuş kartına 6 dan fazla fiyat politikası uygulanamasın (Econpomy,Business) (TL,Dolar,Euro) olarak 6 farklı adet değer girip 7. kaydı test edelim
             #region Case10
+            FlightCard card10 = new FlightCard(indirect: false);
+            var departureDate10 = DateTime.Now.AddHours(15);
+            var arrivalDate10 = DateTime.Now.AddHours(20);
+            Flight f10 = new Flight(from, to, departureDate10, arrivalDate10);
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Business.ToString(), currency: FlightTypeCurrency.TL.ToString(), 150));
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Business.ToString(), currency: FlightTypeCurrency.Dolar.ToString(), 150));
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Business.ToString(), currency: FlightTypeCurrency.Euro.ToString(), 150));
+
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Economy.ToString(), currency: FlightTypeCurrency.TL.ToString(), 100));
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Economy.ToString(), currency: FlightTypeCurrency.Dolar.ToString(), 150));
+            card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Economy.ToString(), currency: FlightTypeCurrency.Euro.ToString(), 100));
+
+            //card10.AddFlightTypePrice(FlightTypePrice.CreateInstance(type: FlightType.Economy.ToString(), currency: FlightTypeCurrency.TL.ToString(), 90));
 
             #endregion
 
