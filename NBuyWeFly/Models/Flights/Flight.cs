@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NBuyWeFly.Models.Flights
 {
+   
     public class Flight
     {
         public Airport From { get; private set; }
@@ -17,6 +18,7 @@ namespace NBuyWeFly.Models.Flights
 
         public Company Company { get; private set; }
 
+        //uçuş numarası
         public string FlightNumber { get; private set; }
 
 

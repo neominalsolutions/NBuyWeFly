@@ -164,7 +164,7 @@ namespace NBuyWeFly
             /// Test Case 9 Business kaydı atalım 150 TL olsun arkasında 170 lik Economy alarak ekleme yapalım
 
             #endregion
-            // uçuş kartına 6 dan fazla fiyat politikası uygulanamasın (Econpomy,Business) (TL,Dolar,Euro) olarak 6 farklı adet değer girip 7. kaydı test edelim
+            // uçuş kartına 6 dan fazla fiyat politikası uygulanamasın (Economy,Business) (TL,Dolar,Euro) olarak 6 farklı adet değer girip 7. kaydı test edelim
             #region Case10
 
             #endregion
